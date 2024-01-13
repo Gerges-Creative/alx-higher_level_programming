@@ -24,7 +24,7 @@ int check_cycle(listint_t *list)
 		hare = hare->next;
 		hare = hare->next;
 
-		if (tortoise->n == hare->n)
+		if (hare != NULL && tortoise != NULL && tortoise->n == hare->n)
 			return (1);
 	}
 
