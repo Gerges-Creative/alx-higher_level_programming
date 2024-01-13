@@ -14,6 +14,7 @@ int check_cycle(listint_t *list)
 	 * is a cycle.
 	 */
 	listint_t *tortoise, *hare;
+	int i;
 
 	tortoise = list;
 	hare = list;
@@ -21,8 +22,8 @@ int check_cycle(listint_t *list)
 	while (hare != NULL)
 	{
 		tortoise = tortoise->next;
-		hare = hare->next;
-		hare = hare->next;
+		for (i = 0; i < 2; i++)
+			hare = hare->next;
 
 		if (hare != NULL && tortoise != NULL && tortoise->n == hare->n)
 			return (1);
