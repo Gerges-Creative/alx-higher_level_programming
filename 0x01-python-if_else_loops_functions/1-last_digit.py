@@ -24,4 +24,4 @@ elif number > 0:
     else:
         print(f'Last digit of {number} is {last_digit} and is 0')
 else:
-    print(f'Last digit of {number} is {last_digit} and is 0')
+    print(f'Last digit of 0 is 0 and is 0')
