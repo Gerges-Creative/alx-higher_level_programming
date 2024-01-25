@@ -23,3 +23,5 @@ elif number > 0:
  not 0')
     else:
         print(f'Last digit of {number} is {last_digit} and is 0')
+else:
+    print(f'Last digit of {number} is {last_digit} and is 0')
