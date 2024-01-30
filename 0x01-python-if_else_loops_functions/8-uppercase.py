@@ -6,6 +6,3 @@ def uppercase(str):
         print('{0:s}'.format(i), end='')
 
     print('')
-
-
-uppercase("best")
