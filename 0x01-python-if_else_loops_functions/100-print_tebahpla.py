@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 n = 122
-for i in range(27):
+for i in range(26):
     if n % 2 == 0:
         c = chr(n)
     else:
