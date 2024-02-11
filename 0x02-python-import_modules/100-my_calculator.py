@@ -1,0 +1,23 @@
+#!/usr/bin/python3
+from calculator_1 import add, sup, mul, div
+import sys
+argv = sys.argv
+args = len(argv)
+a = int(argv[1])
+b = int(argv[3])
+if __name__ == "__main__":
+    if args != 3:
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        exit(1)
+
+        if argv[2] == '+':
+            print("{0} + {1} = {2}".format(a, b, add(a, b)))
+        elif argv[2] == '-':
+            print("{0} - {1} = {2}".format(a, b, sum(a, b)))
+        elif argv[2] == '*':
+            print("{0} * {1} = {2}".format(a, b, mul(a, b)))
+        elif argv[2] == '/':
+            print("{0} / {1} = {2}".format(a, b, div(a, b)))
+        else:
+            print("Unknown operator. Available operators: +, -, * and /")
+            exit(1)
