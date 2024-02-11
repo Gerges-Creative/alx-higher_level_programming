@@ -15,7 +15,7 @@ if __name__ == "__main__":
         if argv[2] == '+':
             print("{0} + {1} = {2}".format(a, b, add(a, b)))
         elif argv[2] == '-':
-            print("{0} - {1} = {2}".format(a, b, sum(a, b)))
+            print("{0} - {1} = {2}".format(a, b, sub(a, b)))
         elif argv[2] == '*':
             print("{0} * {1} = {2}".format(a, b, mul(a, b)))
         elif argv[2] == '/':
