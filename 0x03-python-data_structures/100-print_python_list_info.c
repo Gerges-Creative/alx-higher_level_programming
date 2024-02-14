@@ -1,3 +1,4 @@
+#include </usr/include/python3.8/pyconfig.h>
 #include <stdio.h>
 #include <Python.h>
 
