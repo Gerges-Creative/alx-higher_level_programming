@@ -1,14 +1,11 @@
 #include <Python.h>
 
-/*
-includes listobject.h
-VIEW HEADER-> https://github.com/python/cpython/blob/master/Include/listobject.h
-VIEW MANUAL-> https://docs.python.org/3.4/c-api/list.html
-
-includes object.h
-VIEW HEADER-> https://docs.python.org/3.4/c-api/structures.html
-VIEW MANUAL-> https://github.com/python/cpython/blob/master/Include/object.h
-*/
+/**
+ * print_python_list_info - a C function that prints some basic info about
+ * Python lists.
+ * @p: pointer to python object list
+ * Return: No return needed
+ */
 
 void print_python_list_info(PyObject *p)
 {
