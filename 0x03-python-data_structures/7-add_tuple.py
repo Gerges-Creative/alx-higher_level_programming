@@ -5,7 +5,6 @@ def add_tuple(tuple_a=(), tuple_b=()):
     if len(tuple_b) < 2:
         tuple_b = 0, 0
 
-    for i in range(2):
-        tuple_c = tuple_a[i] + tuple_b[i]
+    tuple_c = tuple(map(lambda i, j:i + j, tuple_a, tuple_b))
 
     return tuple_c
