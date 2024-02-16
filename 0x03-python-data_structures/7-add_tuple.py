@@ -8,5 +8,4 @@ def add_tuple(tuple_a=(), tuple_b=()):
     for i in range(2):
         tuple_c = tuple_a[i] + tuple_b[i]
 
-    print(tuple_c)
     return tuple_c
