@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 def multiple_returns(sentence):
     len_s = len(sentence)
-    first_char = sentence[0]
+    if len_s == 0:
+        first_char = None
+    else:
+        first_char = sentence[0]
 
     tuple_s = len_s, first_char
 
