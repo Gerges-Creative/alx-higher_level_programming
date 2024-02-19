@@ -2,7 +2,7 @@
 def delete_at(my_list=[], idx=0):
     lenList = len(my_list)
 
-    if idx < 0 or idx > lenList:
+    if idx < 0 or idx >= lenList:
         return my_list
 
     my_list.remove(my_list[idx])
