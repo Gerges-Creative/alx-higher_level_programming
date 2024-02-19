@@ -4,8 +4,8 @@ def divisible_by_2(my_list=[]):
 
     for i in range(len(my_list)):
         if (my_list[i] % 2) == 0:
-            my_list[i] = True
+            div_list.append(True)
         else:
-            my_list[i] = False
+            div_list.append(False)
 
     return div_list
