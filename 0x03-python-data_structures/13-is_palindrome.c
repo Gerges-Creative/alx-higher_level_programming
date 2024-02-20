@@ -9,12 +9,12 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *node;
-	int *array, n = 0, i, l_side;
+	int *array, n = 0, i;
 
 	if (*head == NULL)
 		return (1);
 	if (head == NULL)
-		return (1);
+		return (0);
 	node = *head;
 	/* while loop to count how many nodes in the linked list */
 	while (node != NULL)
@@ -25,19 +25,17 @@ int is_palindrome(listint_t **head)
 
 	array = malloc(n * sizeof(int));
 	node = *head;
-	for (i = 0; i < n - 1; i++)
+	for (i = 0; i < n; i++)
 	{
 		array[i] = node->n;
 		node = node->next;
 	}
 
-	l_side = n - 1;
-	if (l_side == 1)
+	if (n == 1)
 		return (1);
-	for (i = 0; i < (n - 1) / 2; i++)
+	for (i = 0; i < (n / 2); i++)
 	{
-		l_side--;
-		if (array[i] != array[l_side])
+		if (array[i] != array[n - i -1])
 		{
 			free(array);
 			return (0);
