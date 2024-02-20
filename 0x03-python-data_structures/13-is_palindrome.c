@@ -14,7 +14,7 @@ int is_palindrome(listint_t **head)
 	if (*head == NULL)
 		return (1);
 	if (head == NULL)
-		return (0);
+		return (1);
 	node = *head;
 	/* while loop to count how many nodes in the linked list */
 	while (node != NULL)
