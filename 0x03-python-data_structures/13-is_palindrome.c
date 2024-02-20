@@ -29,7 +29,7 @@ int is_palindrome(listint_t **head)
 		node = node->next;
 	}
 
-	l_side = n -1;
+	l_side = n - 1;
 	if ((l_side % 2) != 0)
 		return (0);
 
