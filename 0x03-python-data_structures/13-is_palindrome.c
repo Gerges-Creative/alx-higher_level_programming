@@ -30,9 +30,6 @@ int is_palindrome(listint_t **head)
 	}
 
 	l_side = n - 1;
-	if ((l_side % 2) != 0)
-		return (0);
-
 	for (i = 0; i < (n - 1) / 2; i++)
 	{
 		l_side--;
