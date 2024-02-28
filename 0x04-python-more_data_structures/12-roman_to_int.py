@@ -4,7 +4,7 @@ def roman_to_int(roman_string):
     r = roman_string
 
     is_string = isinstance(roman_string, str)
-    if is_string == False or roman_string is None:
+    if is_string is False or roman_string is None:
         return 0
 
     rom_num = 0
@@ -14,11 +14,11 @@ def roman_to_int(roman_string):
         rom_num += M
 
     if "I" in roman_string:
-        I = roman_string.count("I")
+        rom_I = roman_string.count("I")
         if r.find("I") < r.find("V") or r.find("I") < r.find("X"):
             rom_num -= 1
         else:
-            rom_num += I
+            rom_num += rom_I
 
     if "V" in roman_string:
         V = roman_string.count("V")
