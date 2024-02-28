@@ -26,3 +26,12 @@ print("{} = {}".format(roman_number, roman_to_int(roman_number)))
 
 roman_number = "CCVII"
 print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "XC"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "XCIX"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "XXXIX"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))

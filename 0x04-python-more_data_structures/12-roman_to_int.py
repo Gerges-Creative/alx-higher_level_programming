@@ -15,7 +15,7 @@ def roman_to_int(roman_string):
 
     if "I" in roman_string:
         rom_I = roman_string.count("I")
-        if r.find("I") < r.find("V") or r.find("I") < r.find("X"):
+        if r.find("I") < r.find("V") or r.find("I") < r.rfind("X"):
             rom_num -= 1
         else:
             rom_num += rom_I
@@ -29,7 +29,10 @@ def roman_to_int(roman_string):
         X = roman_string.count("X")
         X = X * 10
         if r.find("X") < r.find("L") or r.find("X") < r.find("C"):
-            rom_num -= 10
+            if r.rfind("X") > r.find("I"):
+                rom_num = rom_num
+            else:
+                rom_num -= 10
         else:
             rom_num += X
 
