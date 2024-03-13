@@ -1,0 +1,5 @@
+-- This script displays the max temperatures of each state ordered by
+-- state name
+SELECT state, value AS max_temp
+FROM temperatures;
+--WHERE value = (SELECT MAX(value));
