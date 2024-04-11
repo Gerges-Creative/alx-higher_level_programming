@@ -2,12 +2,8 @@
 
 const arg = process.argv.slice(2);
 
-if (isNaN(arg[0])) {
-  console.log(1);
-}
-
 function factorial (a) {
-  if (a === 0) {
+  if (a === 0 || isNaN(a)) {
     return 1;
   } else {
     return a * factorial(a - 1);
