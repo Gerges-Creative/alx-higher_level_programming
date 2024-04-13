@@ -7,4 +7,4 @@ function factFunc (currentValue, index) {
   return currentValue * index;
 }
 
-console.log(`${factList}\n${factArr}`);
+console.log(`[${factList}]\n[${factArr}]`);
