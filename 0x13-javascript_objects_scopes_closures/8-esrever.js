@@ -8,4 +8,6 @@ exports.esrever = function (list) {
     list[0] = list[arrLength];
     list[arrLength] = temp;
   }
+
+  return list;
 };
