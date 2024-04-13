@@ -6,5 +6,7 @@ const factArr = factList.map(factFunc);
 function factFunc (currentValue, index) {
   return currentValue * index;
 }
+const o = JSON.stringify(factList, null, 1);
+console.log(o);
 
-console.log(`[${factList}]\n[${factArr}]`);
+console.log(JSON.stringify(factArr, null, 1));
