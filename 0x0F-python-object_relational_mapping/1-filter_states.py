@@ -36,7 +36,7 @@ if __name__ == '__main__':
         cursor.execute("SELECT * FROM states ORDER BY id ASC")
         states = cursor.fetchall()
         for state in states:
-            if  "N" in state[1]:
+            if "N" in state[1]:
                 print("{}".format(state))
 
         cursor.close()
