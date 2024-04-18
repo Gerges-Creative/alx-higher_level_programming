@@ -35,9 +35,10 @@ if __name__ == '__main__':
 
         sql_cmd = """SELECT *
         FROM states
-        WHERE name LIKE '{:s}'
-        ORDER BY id ASC""".format(state_name_searched)
-        cursor.execute(sql_cmd)
+        WHERE name LIKE %s
+        ORDER BY id ASC"""
+
+        cursor.execute(sql_cmd, ('%' + state_name_searched + '%',))
         states = cursor.fetchall()
         for state in states:
             if state[1] == state_name_searched:
