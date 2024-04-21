@@ -5,6 +5,9 @@ Defines class State for SQLAlchemy ORM
 
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
+"""
+Imports from SQLAlchemy
+"""
 
 Base = declarative_base()
 
