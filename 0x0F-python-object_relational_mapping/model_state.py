@@ -1,27 +1,19 @@
 #!/usr/bin/python3
 """
-Defines class State for SQLAlchemy ORM
+Defines class State
 """
 
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
-"""
-Imports from sqlalchemy
-"""
 
 Base = declarative_base()
 
 
 class State(Base):
     """
-    Represents a state in a country.
-
-    Inherits from SQLAlchemy's Base class.
-
-    Attributes:
-        id (int): Auto-incremented primary key for the state.
-        name (str): Name of the state, limited to 128 characters.
+    Class State; instance of Base
+    Linked to MySQL table "states"
     """
     __tablename__ = "states"
-    id = Column(Integer, prinmary_key=True, autoincrement=True)
-    name = Column(string(128), nullable=False)
+    id = Column(Integer, nullable=False, primary_key=True)
+    name = Column(String(128), nullable=False)
