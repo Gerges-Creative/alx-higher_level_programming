@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Defines class State
+Defines class State for SQLAlchemy ORM
 """
 
 from sqlalchemy.ext.declarative import declarative_base
@@ -11,8 +11,13 @@ Base = declarative_base()
 
 class State(Base):
     """
-    Class State; instance of Base
-    Linked to MySQL table "states"
+    Represents a state in a country.
+
+    Inherits from SQLAlchemy's Base class.
+
+    Attributes:
+        id (int): Auto-incremented primary key for the state.
+        name (str): Name of the state, limited to 128 characters.
     """
     __tablename__ = 'states'
 
