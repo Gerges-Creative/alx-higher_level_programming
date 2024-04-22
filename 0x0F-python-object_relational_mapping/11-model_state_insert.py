@@ -22,6 +22,7 @@ if __name__ == "__main__":
     # add new state and commit to table
     ins = State(name='Louisiana')
     session.add(ins)
+    session.commit()
     results = session.query(State).filter(State.name == "Louisiana").first()
     if results:
         print("{}".format(results.id))
