@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-return first state object from database via python
+return state id given state name; SQL injection free
 parameters given to script: username, password, database
 """
 
@@ -19,11 +19,11 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    results = session.query(State).order_by(State.id).first()
+    # query python instance in database state id given state name
+    results = session.query(State).filter(State.name == sys.argv[4]).first()
     if results:
-        print("{}: {}".format(results[0], results[1]))
+        print("{}".format(results.id))
     else:
-        print("Nothing")
-
+        print("Not found")
 
     session.close()
