@@ -22,8 +22,7 @@ if __name__ == "__main__":
 
     rows = session.query(State).order_by(State.id).all()
     for state in rows:
-        print("{}: {}".format(state.id, state.name))
         for city in state.cities:
-            print("{}: {}".format(city.id, city.name))
+            print("{}: {} -> {}".format(city.id, city.name, state.name))
 
     session.close()
