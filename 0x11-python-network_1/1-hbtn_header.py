@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-
+"""
+given URL as parameter, fetch URL and display value from reponse header
+usage: ./1-hbtn_header https://intranet.hbtn.io
+"""
 import sys
 import urllib.request
-import urllib.parse
 
 req = urllib.request.Request(sys.argv[1])
 with urllib.request.urlopen(req) as response:
