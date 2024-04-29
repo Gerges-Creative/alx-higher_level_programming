@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
     try:
         res = r.json()
-        if dic:
+        if res:
             print("[{}] {}".format(res.get('id'), res.get('name')))
         else:
             print("No result")
