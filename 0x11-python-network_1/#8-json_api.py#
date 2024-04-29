@@ -1,0 +1,14 @@
+#!/usr/bin/python3
+
+from sys import argv
+import requests
+
+if __name__ == "__main__":
+    url = argv[1]
+
+    if argv[1]:
+        payload = {'q': argv[1]}
+    else:
+        payload = {'q': ""}
+
+    r = requests.post(url, data=payload)
